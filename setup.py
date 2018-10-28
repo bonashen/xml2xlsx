@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup
 from codecs import open
 from os import path
+
+from setuptools import setup
 
 here = path.abspath(path.dirname(__file__))
 
@@ -10,7 +11,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='xml2xlsx',
-    version='1.0.0',
+    version='1.0.1',
     description='XML to XLSX converter',
     long_description=long_description,
     url='https://github.com/marrog/xml2xlsx',
@@ -30,6 +31,7 @@ setup(
     keywords='xml lxml xlsx development',
     packages=['xml2xlsx'],
     install_requires=['lxml>=3.6', 'openpyxl>=2.4.7,<2.5', 'six>=1.10'],
+    test_requires=['nose', 'tox', 'coverage'],
     entry_points={
         'console_scripts': ['xml2xlsx=xml2xlsx.command_line:main'],
     },
